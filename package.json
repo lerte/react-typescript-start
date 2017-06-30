@@ -1,0 +1,81 @@
+{
+  "name": "react-typescript-start",
+  "version": "1.0.0",
+  "description": "Start for Typescript and React Hot Loader",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --env production",
+    "build:dev": "webpack --env development",
+    "start": "webpack-dev-server --env development",
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "build-storybook": "build-storybook",
+    "lint": "tslint src/**/*.tsx",
+    "test": "jest --coverage",
+    "test:clean": "rimraf ./coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lerte/react-typescript-start.git"
+  },
+  "keywords": [
+    "react",
+    "reactjs",
+    "boilerplate",
+    "typescript",
+    "react-hot-loader"
+  ],
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "collectCoverageFrom": [
+      "src/components/**/*.{tsx}",
+      "!src/**/*.test.{tsx}",
+      "!src/**/*.stories.{tsx}"
+    ],
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": ".*\\.spec\\.tsx$"
+  },
+  "author": "Lerte Smith<lertesmith@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@kadira/storybook": "^2.35.3",
+    "@types/enzyme": "^2.8.1",
+    "@types/jest": "^20.0.2",
+    "@types/react": "^15.0.33",
+    "@types/react-dom": "^15.5.1",
+    "@types/react-hot-loader": "^3.0.2",
+    "@types/webpack-env": "^1.13.0",
+    "awesome-typescript-loader": "^3.2.1",
+    "clean-webpack-plugin": "^0.1.16",
+    "enzyme": "^2.9.1",
+    "friendly-errors-webpack-plugin": "^1.6.1",
+    "html-webpack-plugin": "^2.29.0",
+    "html-webpack-template": "^6.0.1",
+    "http-server": "^0.10.0",
+    "jest": "^20.0.4",
+    "jest-enzyme": "^3.4.0",
+    "react-addons-test-utils": "^15.6.0",
+    "react-test-renderer": "^15.6.1",
+    "ts-jest": "^20.0.6",
+    "tslint": "^5.4.3",
+    "tslint-loader": "^3.5.3",
+    "tslint-react": "^3.0.0",
+    "typescript": "^2.1.5",
+    "webpack": "^3.0.0",
+    "webpack-dev-middleware": "^1.11.0",
+    "webpack-dev-server": "^2.5.0",
+    "webpack-hot-middleware": "^2.18.0",
+    "webpack-merge": "^4.1.0"
+  },
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-hot-loader": "next",
+    "styled-components": "^2.1.0"
+  }
+}
